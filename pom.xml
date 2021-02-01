@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.greenzone.jaspicpoc</groupId>
+  <artifactId>jaspicpoc-web</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>JASPIC POC</name>
+  <description>This project demos a simple web app that requires authentication and uses JASPIC</description>
+  <packaging>war</packaging>
+  <properties>
+  	<failOnMissingWebXml>false</failOnMissingWebXml>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  	<maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.jboss.spec</groupId>
+  			<artifactId>jboss-javaee-web-7.0</artifactId>
+  			<version>1.1.1.Final</version>
+  			<type>pom</type>
+  			<scope>import</scope>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.jboss.spec.javax.security.auth.message</groupId>
+  		<artifactId>jboss-jaspi-api_1.1_spec</artifactId>
+  		<scope>provided</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.jboss.spec.javax.servlet.jsp</groupId>
+  		<artifactId>jboss-jsp-api_2.3_spec</artifactId>
+  		<scope>provided</scope>
+  	</dependency>
+  </dependencies>
+</project>
